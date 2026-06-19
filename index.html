@@ -197,7 +197,6 @@
     .gold-divider { width: 60px; height: 2px; background: var(--gold); margin: 20px 0; }
     .gold-divider.centered { margin: 20px auto; }
 
-    /* CHI SIAMO */
     #chi-siamo { background: var(--black2); }
 
     .chi-siamo-grid {
@@ -218,7 +217,6 @@
 
     .stat-label { color: #888; font-size: 0.8rem; margin-top: 4px; }
 
-    /* CORSI */
     #corsi { background: var(--black); }
 
     .corsi-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; margin-top: 60px; }
@@ -247,28 +245,22 @@
     .corso-card:hover::before { transform: scaleX(1); }
 
     .corso-emoji { font-size: 2.5rem; margin-bottom: 20px; display: block; }
-
     .corso-title { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 700; color: var(--gold); margin-bottom: 12px; }
-
     .corso-desc { color: #888; font-size: 0.88rem; line-height: 1.7; margin-bottom: 20px; }
-
     .corso-tag { display: inline-block; background: rgba(201,168,76,0.1); color: var(--gold); padding: 4px 12px; border-radius: 20px; font-size: 0.75rem; font-weight: 600; }
-
     .corso-tag.disponibile { background: rgba(39,174,96,0.1); color: var(--green); }
 
-    /* DOCENTI */
     #docenti { background: var(--black2); }
 
-    .docenti-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px; margin-top: 60px; }
+    .docenti-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 24px; margin-top: 60px; }
 
     .docente-card {
       background: var(--black3);
       border: 1px solid #222;
       border-radius: 16px;
-      padding: 36px 28px;
+      padding: 32px 24px;
       text-align: center;
       transition: all 0.3s;
-      position: relative;
     }
 
     .docente-card:hover { border-color: rgba(201,168,76,0.3); transform: translateY(-4px); }
@@ -283,24 +275,11 @@
       margin: 0 auto 20px;
     }
 
-    .docente-nome { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 700; color: var(--white); margin-bottom: 6px; }
+    .docente-nome { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; font-weight: 700; color: var(--white); margin-bottom: 6px; }
+    .docente-ruolo { color: var(--gold); font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px; }
+    .docente-anni { display: inline-block; background: rgba(201,168,76,0.1); color: var(--gold); padding: 4px 12px; border-radius: 20px; font-size: 0.72rem; font-weight: 600; margin-bottom: 16px; }
+    .docente-bio { color: #888; font-size: 0.83rem; line-height: 1.7; }
 
-    .docente-ruolo { color: var(--gold); font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px; }
-
-    .docente-anni {
-      display: inline-block;
-      background: rgba(201,168,76,0.1);
-      color: var(--gold);
-      padding: 4px 12px;
-      border-radius: 20px;
-      font-size: 0.75rem;
-      font-weight: 600;
-      margin-bottom: 16px;
-    }
-
-    .docente-bio { color: #888; font-size: 0.85rem; line-height: 1.7; }
-
-    /* APP HACCP */
     #app-haccp { background: var(--black); position: relative; overflow: hidden; }
 
     #app-haccp::before {
@@ -310,8 +289,6 @@
       background: radial-gradient(ellipse at right center, rgba(201,168,76,0.05) 0%, transparent 60%);
       pointer-events: none;
     }
-
-    .haccp-intro { text-align: center; margin-bottom: 60px; }
 
     .haccp-features-grid {
       display: grid;
@@ -324,7 +301,7 @@
       background: var(--black2);
       border: 1px solid #1a1a1a;
       border-radius: 12px;
-      padding: 20px;
+      padding: 16px 20px;
       display: flex;
       align-items: center;
       gap: 12px;
@@ -332,14 +309,9 @@
       color: #ccc;
     }
 
-    .haccp-feature-card::before { content: '✓'; color: var(--green); font-weight: 700; flex-shrink: 0; font-size: 1rem; }
+    .haccp-feature-card::before { content: '✓'; color: var(--green); font-weight: 700; flex-shrink: 0; }
 
-    /* PREZZI */
-    .prezzi-toggle {
-      display: flex;
-      justify-content: center;
-      margin-bottom: 40px;
-    }
+    .prezzi-toggle { display: flex; justify-content: center; margin-bottom: 40px; }
 
     .prezzi-tabs {
       display: inline-flex;
@@ -376,7 +348,6 @@
     }
 
     .prezzo-card:hover { border-color: rgba(201,168,76,0.3); transform: translateY(-4px); }
-
     .prezzo-card.popolare { border: 2px solid var(--gold); }
 
     .prezzo-badge-pop {
@@ -404,11 +375,8 @@
     }
 
     .prezzo-nome { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; color: var(--gold); margin-bottom: 8px; }
-
     .prezzo-importo { font-size: 2.2rem; font-weight: 700; color: var(--white); }
-
     .prezzo-periodo { color: #888; font-size: 0.85rem; }
-
     .prezzo-operatori { color: #aaa; font-size: 0.82rem; margin: 12px 0 20px; }
 
     .prezzo-btn {
@@ -426,10 +394,8 @@
     }
 
     .prezzo-btn:hover { background: var(--gold); color: var(--black); }
-
     .prezzo-card.popolare .prezzo-btn { background: var(--gold); color: var(--black); }
 
-    /* LAVORO */
     #lavoro { background: var(--black2); }
 
     .lavoro-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; margin-bottom: 60px; }
@@ -444,11 +410,8 @@
     }
 
     .lavoro-card:hover { border-color: rgba(201,168,76,0.3); transform: translateY(-4px); }
-
     .lavoro-card-icon { font-size: 2.5rem; margin-bottom: 20px; }
-
     .lavoro-card h3 { font-family: 'Cormorant Garamond', serif; color: var(--gold); font-size: 1.3rem; margin-bottom: 12px; }
-
     .lavoro-card p { color: #888; font-size: 0.88rem; line-height: 1.7; }
 
     .lavoro-banner {
@@ -460,14 +423,10 @@
     }
 
     .lavoro-banner-tag { font-size: 0.75rem; font-weight: 700; letter-spacing: 4px; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; }
-
     .lavoro-banner h3 { font-family: 'Cormorant Garamond', serif; font-size: 2rem; color: var(--white); margin-bottom: 16px; line-height: 1.2; }
-
     .lavoro-banner h3 span { color: var(--gold); }
-
     .lavoro-banner p { color: #888; font-size: 0.95rem; max-width: 600px; margin: 0 auto 32px; line-height: 1.8; }
 
-    /* CONTATTI */
     #contatti { background: var(--black); }
 
     .contatti-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; margin-top: 60px; }
@@ -484,13 +443,11 @@
     }
 
     .contatto-item:hover { border-color: rgba(201,168,76,0.4); }
-
     .contatto-icon { font-size: 1.5rem; width: 48px; text-align: center; flex-shrink: 0; }
     .contatto-label { color: #888; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; }
     .contatto-value { color: var(--white); font-size: 0.9rem; font-weight: 600; margin-top: 2px; }
 
     .form-group { margin-bottom: 20px; }
-
     .form-group label { display: block; color: #888; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; }
 
     .form-group input,
@@ -539,14 +496,10 @@
     }
 
     .footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-weight: 700; color: var(--gold); margin-bottom: 8px; }
-
     .footer-tagline { color: #555; font-size: 0.82rem; font-style: italic; margin-bottom: 24px; }
-
     .footer-links { display: flex; gap: 24px; justify-content: center; margin-bottom: 24px; flex-wrap: wrap; }
-
     .footer-links a { color: #555; text-decoration: none; font-size: 0.82rem; transition: color 0.2s; }
     .footer-links a:hover { color: var(--gold); }
-
     .footer-copy { color: #333; font-size: 0.78rem; }
 
     @media (max-width: 768px) {
@@ -574,7 +527,6 @@
     </ul>
   </nav>
 
-  <!-- HERO -->
   <section id="hero">
     <span class="hero-tag">Formazione professionale HoReCa</span>
     <h1 class="hero-title">Season Work<br><span>Academy</span></h1>
@@ -590,7 +542,6 @@
     <div class="hero-divider"></div>
   </section>
 
-  <!-- CHI SIAMO -->
   <section id="chi-siamo">
     <div class="container">
       <div class="section-tag">Chi siamo</div>
@@ -612,7 +563,6 @@
     </div>
   </section>
 
-  <!-- CORSI -->
   <section id="corsi">
     <div class="container">
       <div style="text-align:center">
@@ -662,7 +612,6 @@
     </div>
   </section>
 
-  <!-- DOCENTI -->
   <section id="docenti">
     <div class="container">
       <div style="text-align:center; margin-bottom: 60px">
@@ -694,20 +643,26 @@
           <p class="docente-bio">Barman con oltre dieci anni di esperienza nel beverage professionale. Specializzato in mixology, cocktail contemporanei e gestione del banco bar.</p>
         </div>
         <div class="docente-card">
+          <div class="docente-avatar">🍕</div>
+          <div class="docente-nome">Costanzo Pisano</div>
+          <div class="docente-ruolo">Pizzaiolo</div>
+          <span class="docente-anni">Giovane talento</span>
+          <p class="docente-bio">Pizzaiolo con una solida esperienza già maturata nell'arte della pizza artigianale. Padronanza degli impasti, lievitazioni e cottura nel forno a legna.</p>
+        </div>
+        <div class="docente-card">
           <div class="docente-avatar">🍰</div>
           <div class="docente-nome">Simona Manca</div>
           <div class="docente-ruolo">Chef Pasticcera</div>
           <span class="docente-anni">Giovane talento</span>
-          <p class="docente-bio">Chef pasticcera con una solida esperienza già maturata nella pasticceria artigianale e nella pasticceria moderna. Creatività e precisione tecnica.</p>
+          <p class="docente-bio">Chef pasticcera con esperienza maturata nella pasticceria artigianale e moderna. Creatività, precisione tecnica e passione per i dessert d'autore.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- APP HACCP -->
   <section id="app-haccp">
     <div class="container">
-      <div class="haccp-intro">
+      <div style="text-align:center; margin-bottom: 60px">
         <div class="section-tag">Strumento digitale incluso</div>
         <h2 class="section-title">Season Work <span>HACCP</span></h2>
         <div class="gold-divider centered"></div>
@@ -731,17 +686,14 @@
         <div class="haccp-feature-card">AI scan con Claude</div>
       </div>
 
-      <!-- TOGGLE PREZZI -->
       <div class="prezzi-toggle">
         <div class="prezzi-tabs">
           <button class="prezzi-tab active" onclick="setPiano(false, this)">Senza AI</button>
-          <button class="prezzi-tab" onclick="setPiano(true, this)">Con AI 🤖 <span style="font-size:0.75rem; color: inherit">+€10-15/mese</span></button>
+          <button class="prezzi-tab" onclick="setPiano(true, this)">Con AI 🤖 <span style="font-size:0.75rem">+€10-15/mese</span></button>
         </div>
       </div>
 
-      <div class="prezzi-grid" id="prezzi-grid">
-        <!-- Popolato da JS -->
-      </div>
+      <div class="prezzi-grid" id="prezzi-grid"></div>
 
       <div style="text-align:center; margin-top: 48px">
         <div style="display:inline-block; background: rgba(39,174,96,0.1); border: 1px solid rgba(39,174,96,0.3); color: var(--green); padding: 12px 32px; border-radius: 8px; font-weight: 600; font-size: 0.9rem; margin-bottom: 24px;">
@@ -753,7 +705,6 @@
     </div>
   </section>
 
-  <!-- LAVORO -->
   <section id="lavoro">
     <div class="container">
       <div style="text-align:center; margin-bottom: 60px">
@@ -790,7 +741,6 @@
     </div>
   </section>
 
-  <!-- CONTATTI -->
   <section id="contatti">
     <div class="container">
       <div style="text-align:center; margin-bottom: 60px">
@@ -866,10 +816,10 @@
 
   <script>
     const piani = [
-      { id: 'admin', nome: 'Solo Admin', mensile: 29.90, annuale: 299.00, mensileAI: 39.90, annualeAI: 399.00, operatori: 'Solo accesso admin', popolare: false },
-      { id: '3op', nome: '3 Operatori', mensile: 39.90, annuale: 399.00, mensileAI: 49.90, annualeAI: 499.00, operatori: 'Fino a 3 operatori', popolare: false },
-      { id: '6op', nome: '6 Operatori', mensile: 49.90, annuale: 499.00, mensileAI: 59.90, annualeAI: 599.00, operatori: 'Fino a 6 operatori', popolare: true },
-      { id: 'ill', nome: 'Illimitati', mensile: 69.90, annuale: 699.00, mensileAI: 84.90, annualeAI: 849.00, operatori: 'Operatori illimitati', popolare: false },
+      { nome: 'Solo Admin', mensile: 29.90, mensileAI: 39.90, operatori: 'Solo accesso admin', popolare: false },
+      { nome: '3 Operatori', mensile: 39.90, mensileAI: 49.90, operatori: 'Fino a 3 operatori', popolare: false },
+      { nome: '6 Operatori', mensile: 49.90, mensileAI: 59.90, operatori: 'Fino a 6 operatori', popolare: true },
+      { nome: 'Illimitati', mensile: 69.90, mensileAI: 84.90, operatori: 'Operatori illimitati', popolare: false },
     ];
 
     let conAI = false;
