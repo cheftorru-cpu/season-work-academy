@@ -15,7 +15,6 @@
       --black2: #0f0f0f;
       --black3: #1a1a1a;
       --white: #ffffff;
-      --gray: #888888;
       --green: #27AE60;
     }
 
@@ -29,7 +28,6 @@
       line-height: 1.6;
     }
 
-    /* NAV */
     nav {
       position: fixed;
       top: 0; left: 0; right: 0;
@@ -51,16 +49,12 @@
       letter-spacing: 2px;
     }
 
-    .nav-links {
-      display: flex;
-      gap: 32px;
-      list-style: none;
-    }
+    .nav-links { display: flex; gap: 28px; list-style: none; }
 
     .nav-links a {
       color: #aaa;
       text-decoration: none;
-      font-size: 0.85rem;
+      font-size: 0.8rem;
       font-weight: 600;
       letter-spacing: 1px;
       text-transform: uppercase;
@@ -77,9 +71,8 @@
       font-weight: 700 !important;
     }
 
-    .nav-cta:hover { background: var(--gold-light); color: var(--black) !important; }
+    .nav-cta:hover { background: var(--gold-light); }
 
-    /* HERO */
     #hero {
       min-height: 100vh;
       display: flex;
@@ -140,12 +133,7 @@
       line-height: 1.8;
     }
 
-    .hero-btns {
-      display: flex;
-      gap: 16px;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
+    .hero-btns { display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; }
 
     .btn-primary {
       background: var(--gold);
@@ -157,6 +145,7 @@
       text-decoration: none;
       letter-spacing: 1px;
       transition: all 0.2s;
+      display: inline-block;
     }
 
     .btn-primary:hover { background: var(--gold-light); transform: translateY(-2px); }
@@ -172,19 +161,13 @@
       letter-spacing: 1px;
       border: 2px solid var(--gold);
       transition: all 0.2s;
+      display: inline-block;
     }
 
     .btn-secondary:hover { background: rgba(201,168,76,0.1); transform: translateY(-2px); }
 
-    .hero-divider {
-      width: 80px;
-      height: 2px;
-      background: var(--gold);
-      margin: 60px auto 0;
-      opacity: 0.4;
-    }
+    .hero-divider { width: 80px; height: 2px; background: var(--gold); margin: 60px auto 0; opacity: 0.4; }
 
-    /* SEZIONI GENERALI */
     section { padding: 100px 24px; }
 
     .section-tag {
@@ -207,17 +190,12 @@
 
     .section-title span { color: var(--gold); }
 
-    .section-desc {
-      color: #888;
-      font-size: 0.95rem;
-      line-height: 1.8;
-      max-width: 600px;
-    }
+    .section-desc { color: #888; font-size: 0.95rem; line-height: 1.8; max-width: 600px; }
 
-    .container {
-      max-width: 1100px;
-      margin: 0 auto;
-    }
+    .container { max-width: 1100px; margin: 0 auto; }
+
+    .gold-divider { width: 60px; height: 2px; background: var(--gold); margin: 20px 0; }
+    .gold-divider.centered { margin: 20px auto; }
 
     /* CHI SIAMO */
     #chi-siamo { background: var(--black2); }
@@ -230,50 +208,20 @@
       margin-top: 60px;
     }
 
-    .chi-siamo-text p {
-      color: #aaa;
-      font-size: 0.95rem;
-      line-height: 1.9;
-      margin-bottom: 20px;
-    }
+    .chi-siamo-text p { color: #aaa; font-size: 0.95rem; line-height: 1.9; margin-bottom: 20px; }
 
-    .chi-siamo-stats {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 24px;
-    }
+    .chi-siamo-stats { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
 
-    .stat-card {
-      background: var(--black3);
-      border: 1px solid #222;
-      border-radius: 12px;
-      padding: 28px 24px;
-      text-align: center;
-    }
+    .stat-card { background: var(--black3); border: 1px solid #222; border-radius: 12px; padding: 28px 24px; text-align: center; }
 
-    .stat-number {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 2.8rem;
-      font-weight: 700;
-      color: var(--gold);
-      display: block;
-    }
+    .stat-number { font-family: 'Cormorant Garamond', serif; font-size: 2.8rem; font-weight: 700; color: var(--gold); display: block; }
 
-    .stat-label {
-      color: #888;
-      font-size: 0.8rem;
-      margin-top: 4px;
-    }
+    .stat-label { color: #888; font-size: 0.8rem; margin-top: 4px; }
 
     /* CORSI */
     #corsi { background: var(--black); }
 
-    .corsi-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 24px;
-      margin-top: 60px;
-    }
+    .corsi-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; margin-top: 60px; }
 
     .corso-card {
       background: var(--black2);
@@ -300,22 +248,46 @@
 
     .corso-emoji { font-size: 2.5rem; margin-bottom: 20px; display: block; }
 
-    .corso-title {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.5rem;
-      font-weight: 700;
-      color: var(--gold);
-      margin-bottom: 12px;
+    .corso-title { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 700; color: var(--gold); margin-bottom: 12px; }
+
+    .corso-desc { color: #888; font-size: 0.88rem; line-height: 1.7; margin-bottom: 20px; }
+
+    .corso-tag { display: inline-block; background: rgba(201,168,76,0.1); color: var(--gold); padding: 4px 12px; border-radius: 20px; font-size: 0.75rem; font-weight: 600; }
+
+    .corso-tag.disponibile { background: rgba(39,174,96,0.1); color: var(--green); }
+
+    /* DOCENTI */
+    #docenti { background: var(--black2); }
+
+    .docenti-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px; margin-top: 60px; }
+
+    .docente-card {
+      background: var(--black3);
+      border: 1px solid #222;
+      border-radius: 16px;
+      padding: 36px 28px;
+      text-align: center;
+      transition: all 0.3s;
+      position: relative;
     }
 
-    .corso-desc {
-      color: #888;
-      font-size: 0.88rem;
-      line-height: 1.7;
-      margin-bottom: 20px;
+    .docente-card:hover { border-color: rgba(201,168,76,0.3); transform: translateY(-4px); }
+
+    .docente-avatar {
+      width: 80px; height: 80px;
+      background: rgba(201,168,76,0.1);
+      border: 2px solid rgba(201,168,76,0.3);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 2rem;
+      margin: 0 auto 20px;
     }
 
-    .corso-tag {
+    .docente-nome { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; font-weight: 700; color: var(--white); margin-bottom: 6px; }
+
+    .docente-ruolo { color: var(--gold); font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px; }
+
+    .docente-anni {
       display: inline-block;
       background: rgba(201,168,76,0.1);
       color: var(--gold);
@@ -323,100 +295,13 @@
       border-radius: 20px;
       font-size: 0.75rem;
       font-weight: 600;
+      margin-bottom: 16px;
     }
 
-    /* DOCENTI */
-    #docenti { background: var(--black2); }
-
-    .docenti-intro {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 80px;
-      align-items: center;
-      margin-top: 60px;
-    }
-
-    .docenti-list {
-      display: flex;
-      flex-direction: column;
-      gap: 16px;
-    }
-
-    .docente-item {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      padding: 20px;
-      background: var(--black3);
-      border-radius: 12px;
-      border: 1px solid #222;
-    }
-
-    .docente-icon {
-      width: 48px;
-      height: 48px;
-      background: rgba(201,168,76,0.1);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.4rem;
-      flex-shrink: 0;
-    }
-
-    .docente-role {
-      font-weight: 700;
-      color: var(--white);
-      font-size: 0.9rem;
-    }
-
-    .docente-desc {
-      color: #888;
-      font-size: 0.8rem;
-      margin-top: 2px;
-    }
-
-    .docenti-values {
-      display: flex;
-      flex-direction: column;
-      gap: 24px;
-    }
-
-    .value-item {
-      display: flex;
-      gap: 16px;
-      align-items: flex-start;
-    }
-
-    .value-number {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 2rem;
-      color: rgba(201,168,76,0.3);
-      font-weight: 700;
-      line-height: 1;
-      flex-shrink: 0;
-      width: 40px;
-    }
-
-    .value-text h4 {
-      color: var(--gold);
-      font-size: 0.9rem;
-      font-weight: 700;
-      margin-bottom: 4px;
-    }
-
-    .value-text p {
-      color: #888;
-      font-size: 0.85rem;
-      line-height: 1.6;
-    }
+    .docente-bio { color: #888; font-size: 0.85rem; line-height: 1.7; }
 
     /* APP HACCP */
-    #app-haccp {
-      background: var(--black);
-      position: relative;
-      overflow: hidden;
-    }
+    #app-haccp { background: var(--black); position: relative; overflow: hidden; }
 
     #app-haccp::before {
       content: '';
@@ -426,85 +311,171 @@
       pointer-events: none;
     }
 
-    .haccp-grid {
+    .haccp-intro { text-align: center; margin-bottom: 60px; }
+
+    .haccp-features-grid {
       display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 80px;
-      align-items: center;
-      margin-top: 60px;
-    }
-
-    .haccp-features {
-      display: flex;
-      flex-direction: column;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       gap: 16px;
-      margin: 32px 0;
+      margin-bottom: 60px;
     }
 
-    .haccp-feature {
+    .haccp-feature-card {
+      background: var(--black2);
+      border: 1px solid #1a1a1a;
+      border-radius: 12px;
+      padding: 20px;
       display: flex;
       align-items: center;
       gap: 12px;
+      font-size: 0.88rem;
       color: #ccc;
-      font-size: 0.9rem;
     }
 
-    .haccp-feature::before {
-      content: '✓';
-      color: var(--green);
+    .haccp-feature-card::before { content: '✓'; color: var(--green); font-weight: 700; flex-shrink: 0; font-size: 1rem; }
+
+    /* PREZZI */
+    .prezzi-toggle {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 40px;
+    }
+
+    .prezzi-tabs {
+      display: inline-flex;
+      background: var(--black3);
+      border-radius: 10px;
+      padding: 4px;
+      gap: 4px;
+    }
+
+    .prezzi-tab {
+      padding: 10px 28px;
+      border-radius: 8px;
+      border: none;
+      cursor: pointer;
       font-weight: 700;
-      flex-shrink: 0;
+      font-size: 0.9rem;
+      font-family: 'Montserrat', sans-serif;
+      transition: all 0.2s;
+      background: transparent;
+      color: #aaa;
     }
 
-    .haccp-visual {
+    .prezzi-tab.active { background: var(--gold); color: var(--black); }
+
+    .prezzi-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px; }
+
+    .prezzo-card {
       background: var(--black2);
-      border: 1px solid #1a1a1a;
+      border: 1px solid #222;
+      border-radius: 16px;
+      padding: 32px 24px;
+      position: relative;
+      transition: all 0.3s;
+    }
+
+    .prezzo-card:hover { border-color: rgba(201,168,76,0.3); transform: translateY(-4px); }
+
+    .prezzo-card.popolare { border: 2px solid var(--gold); }
+
+    .prezzo-badge-pop {
+      position: absolute;
+      top: -14px; left: 50%;
+      transform: translateX(-50%);
+      background: var(--gold);
+      color: var(--black);
+      padding: 4px 16px;
       border-radius: 20px;
-      padding: 40px;
+      font-size: 0.7rem;
+      font-weight: 700;
+    }
+
+    .prezzo-badge-ai {
+      position: absolute;
+      top: 16px; right: 16px;
+      background: rgba(201,168,76,0.15);
+      border: 1px solid var(--gold);
+      color: var(--gold);
+      padding: 2px 10px;
+      border-radius: 12px;
+      font-size: 0.7rem;
+      font-weight: 700;
+    }
+
+    .prezzo-nome { font-family: 'Cormorant Garamond', serif; font-size: 1.4rem; color: var(--gold); margin-bottom: 8px; }
+
+    .prezzo-importo { font-size: 2.2rem; font-weight: 700; color: var(--white); }
+
+    .prezzo-periodo { color: #888; font-size: 0.85rem; }
+
+    .prezzo-operatori { color: #aaa; font-size: 0.82rem; margin: 12px 0 20px; }
+
+    .prezzo-btn {
+      display: block;
+      text-align: center;
+      background: transparent;
+      color: var(--gold);
+      border: 2px solid var(--gold);
+      border-radius: 8px;
+      padding: 10px;
+      font-weight: 700;
+      font-size: 0.85rem;
+      text-decoration: none;
+      transition: all 0.2s;
+    }
+
+    .prezzo-btn:hover { background: var(--gold); color: var(--black); }
+
+    .prezzo-card.popolare .prezzo-btn { background: var(--gold); color: var(--black); }
+
+    /* LAVORO */
+    #lavoro { background: var(--black2); }
+
+    .lavoro-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; margin-bottom: 60px; }
+
+    .lavoro-card {
+      background: var(--black3);
+      border: 1px solid #222;
+      border-radius: 16px;
+      padding: 36px 28px;
+      text-align: center;
+      transition: all 0.3s;
+    }
+
+    .lavoro-card:hover { border-color: rgba(201,168,76,0.3); transform: translateY(-4px); }
+
+    .lavoro-card-icon { font-size: 2.5rem; margin-bottom: 20px; }
+
+    .lavoro-card h3 { font-family: 'Cormorant Garamond', serif; color: var(--gold); font-size: 1.3rem; margin-bottom: 12px; }
+
+    .lavoro-card p { color: #888; font-size: 0.88rem; line-height: 1.7; }
+
+    .lavoro-banner {
+      background: linear-gradient(135deg, rgba(201,168,76,0.08) 0%, rgba(201,168,76,0.03) 100%);
+      border: 1px solid rgba(201,168,76,0.2);
+      border-radius: 20px;
+      padding: 48px;
       text-align: center;
     }
 
-    .haccp-price {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 3.5rem;
-      font-weight: 700;
-      color: var(--gold);
-    }
+    .lavoro-banner-tag { font-size: 0.75rem; font-weight: 700; letter-spacing: 4px; text-transform: uppercase; color: var(--gold); margin-bottom: 16px; }
 
-    .haccp-price-sub {
-      color: #888;
-      font-size: 0.85rem;
-      margin-bottom: 24px;
-    }
+    .lavoro-banner h3 { font-family: 'Cormorant Garamond', serif; font-size: 2rem; color: var(--white); margin-bottom: 16px; line-height: 1.2; }
 
-    .haccp-trial {
-      background: rgba(39,174,96,0.1);
-      border: 1px solid rgba(39,174,96,0.3);
-      color: var(--green);
-      padding: 10px 20px;
-      border-radius: 8px;
-      font-size: 0.85rem;
-      font-weight: 600;
-      margin-bottom: 24px;
-      display: inline-block;
-    }
+    .lavoro-banner h3 span { color: var(--gold); }
+
+    .lavoro-banner p { color: #888; font-size: 0.95rem; max-width: 600px; margin: 0 auto 32px; line-height: 1.8; }
 
     /* CONTATTI */
-    #contatti { background: var(--black2); }
+    #contatti { background: var(--black); }
 
-    .contatti-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 80px;
-      margin-top: 60px;
-    }
+    .contatti-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; margin-top: 60px; }
 
     .contatto-item {
-      display: flex;
-      align-items: center;
-      gap: 16px;
+      display: flex; align-items: center; gap: 16px;
       padding: 20px;
-      background: var(--black3);
+      background: var(--black2);
       border-radius: 12px;
       border: 1px solid #222;
       margin-bottom: 16px;
@@ -514,46 +485,19 @@
 
     .contatto-item:hover { border-color: rgba(201,168,76,0.4); }
 
-    .contatto-icon {
-      font-size: 1.5rem;
-      width: 48px;
-      text-align: center;
-      flex-shrink: 0;
-    }
+    .contatto-icon { font-size: 1.5rem; width: 48px; text-align: center; flex-shrink: 0; }
+    .contatto-label { color: #888; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 1px; }
+    .contatto-value { color: var(--white); font-size: 0.9rem; font-weight: 600; margin-top: 2px; }
 
-    .contatto-label {
-      color: #888;
-      font-size: 0.75rem;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
+    .form-group { margin-bottom: 20px; }
 
-    .contatto-value {
-      color: var(--white);
-      font-size: 0.9rem;
-      font-weight: 600;
-      margin-top: 2px;
-    }
-
-    /* FORM */
-    .form-group {
-      margin-bottom: 20px;
-    }
-
-    .form-group label {
-      display: block;
-      color: #888;
-      font-size: 0.8rem;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      margin-bottom: 8px;
-    }
+    .form-group label { display: block; color: #888; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; }
 
     .form-group input,
     .form-group textarea,
     .form-group select {
       width: 100%;
-      background: var(--black3);
+      background: var(--black2);
       border: 1px solid #222;
       border-radius: 8px;
       padding: 12px 16px;
@@ -569,8 +513,7 @@
     .form-group select:focus { border-color: var(--gold); }
 
     .form-group textarea { height: 120px; resize: vertical; }
-
-    .form-group select option { background: var(--black3); }
+    .form-group select option { background: var(--black2); }
 
     .form-submit {
       width: 100%;
@@ -588,77 +531,36 @@
 
     .form-submit:hover { background: var(--gold-light); }
 
-    /* FOOTER */
     footer {
-      background: var(--black);
+      background: var(--black2);
       border-top: 1px solid #1a1a1a;
       padding: 40px 24px;
       text-align: center;
     }
 
-    .footer-logo {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 1.6rem;
-      font-weight: 700;
-      color: var(--gold);
-      margin-bottom: 8px;
-    }
+    .footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.6rem; font-weight: 700; color: var(--gold); margin-bottom: 8px; }
 
-    .footer-tagline {
-      color: #555;
-      font-size: 0.82rem;
-      font-style: italic;
-      margin-bottom: 24px;
-    }
+    .footer-tagline { color: #555; font-size: 0.82rem; font-style: italic; margin-bottom: 24px; }
 
-    .footer-links {
-      display: flex;
-      gap: 24px;
-      justify-content: center;
-      margin-bottom: 24px;
-      flex-wrap: wrap;
-    }
+    .footer-links { display: flex; gap: 24px; justify-content: center; margin-bottom: 24px; flex-wrap: wrap; }
 
-    .footer-links a {
-      color: #555;
-      text-decoration: none;
-      font-size: 0.82rem;
-      transition: color 0.2s;
-    }
-
+    .footer-links a { color: #555; text-decoration: none; font-size: 0.82rem; transition: color 0.2s; }
     .footer-links a:hover { color: var(--gold); }
 
-    .footer-copy {
-      color: #333;
-      font-size: 0.78rem;
-    }
+    .footer-copy { color: #333; font-size: 0.78rem; }
 
-    /* MOBILE */
     @media (max-width: 768px) {
       nav { padding: 16px 20px; }
       .nav-links { display: none; }
       section { padding: 70px 20px; }
-      .chi-siamo-grid,
-      .docenti-intro,
-      .haccp-grid,
-      .contatti-grid { grid-template-columns: 1fr; gap: 40px; }
+      .chi-siamo-grid, .contatti-grid { grid-template-columns: 1fr; gap: 40px; }
       .chi-siamo-stats { grid-template-columns: 1fr 1fr; }
+      .lavoro-banner { padding: 32px 20px; }
     }
-
-    /* DIVIDER ORO */
-    .gold-divider {
-      width: 60px;
-      height: 2px;
-      background: var(--gold);
-      margin: 20px 0;
-    }
-
-    .gold-divider.centered { margin: 20px auto; }
   </style>
 </head>
 <body>
 
-  <!-- NAV -->
   <nav>
     <a href="#hero" class="nav-logo">Season Work Academy</a>
     <ul class="nav-links">
@@ -666,6 +568,7 @@
       <li><a href="#corsi">Corsi</a></li>
       <li><a href="#docenti">Docenti</a></li>
       <li><a href="#app-haccp">App HACCP</a></li>
+      <li><a href="#lavoro">Lavoro</a></li>
       <li><a href="#contatti">Contatti</a></li>
       <li><a href="https://seasonworkhaccp.com" target="_blank" class="nav-cta">Prova l'App</a></li>
     </ul>
@@ -695,33 +598,15 @@
       <div class="gold-divider"></div>
       <div class="chi-siamo-grid">
         <div class="chi-siamo-text">
-          <p>
-            Season Work Academy nasce dall'esperienza diretta sul campo. Siamo chef, maître, barman, pasticceri e pizzaioli che hanno scelto di trasmettere le proprie competenze alla nuova generazione di professionisti HoReCa.
-          </p>
-          <p>
-            Non insegniamo solo tecnica — insegniamo la mentalità, la disciplina e la passione che distinguono un professionista nel settore della ristorazione moderna.
-          </p>
-          <p>
-            Ogni corso è progettato per essere immediatamente applicabile in cucina, in sala, al banco o in pizzeria.
-          </p>
+          <p>Season Work Academy nasce dall'esperienza diretta sul campo. Siamo chef, maître, barman, pasticceri e pizzaioli che hanno scelto di trasmettere le proprie competenze alla nuova generazione di professionisti HoReCa.</p>
+          <p>Non insegniamo solo tecnica — insegniamo la mentalità, la disciplina e la passione che distinguono un professionista nella ristorazione moderna.</p>
+          <p>Ogni corso è progettato per essere immediatamente applicabile in cucina, in sala, al banco o in pizzeria.</p>
         </div>
         <div class="chi-siamo-stats">
-          <div class="stat-card">
-            <span class="stat-number">6+</span>
-            <div class="stat-label">Corsi disponibili</div>
-          </div>
-          <div class="stat-card">
-            <span class="stat-number">100%</span>
-            <div class="stat-label">Docenti in attività</div>
-          </div>
-          <div class="stat-card">
-            <span class="stat-number">HACCP</span>
-            <div class="stat-label">Certificazione inclusa</div>
-          </div>
-          <div class="stat-card">
-            <span class="stat-number">14gg</span>
-            <div class="stat-label">App gratis da subito</div>
-          </div>
+          <div class="stat-card"><span class="stat-number">6+</span><div class="stat-label">Corsi disponibili</div></div>
+          <div class="stat-card"><span class="stat-number">100%</span><div class="stat-label">Docenti in attività</div></div>
+          <div class="stat-card"><span class="stat-number">HACCP</span><div class="stat-label">App digitale inclusa</div></div>
+          <div class="stat-card"><span class="stat-number">4★</span><div class="stat-label">Strutture partner</div></div>
         </div>
       </div>
     </div>
@@ -734,9 +619,7 @@
         <div class="section-tag">I nostri corsi</div>
         <h2 class="section-title">Scegli la tua <span>specializzazione</span></h2>
         <div class="gold-divider centered"></div>
-        <p class="section-desc" style="margin: 0 auto 60px">
-          Corsi pratici tenuti da professionisti in attività nel settore HoReCa.
-        </p>
+        <p class="section-desc" style="margin: 0 auto 60px">Corsi pratici tenuti da professionisti in attività nel settore HoReCa.</p>
       </div>
       <div class="corsi-grid">
         <div class="corso-card">
@@ -771,9 +654,9 @@
         </div>
         <div class="corso-card">
           <span class="corso-emoji">📋</span>
-          <div class="corso-title">HACCP & Sicurezza</div>
-          <p class="corso-desc">Normativa HACCP, gestione della sicurezza alimentare, procedure di autocontrollo. Certificazione inclusa con accesso all'app digitale.</p>
-          <span class="corso-tag">Disponibile</span>
+          <div class="corso-title">HACCP & Sicurezza Alimentare</div>
+          <p class="corso-desc">Normativa HACCP, gestione digitale della sicurezza alimentare e procedure di autocontrollo. Include accesso all'app Season Work HACCP.</p>
+          <span class="corso-tag disponibile">Disponibile</span>
         </div>
       </div>
     </div>
@@ -782,72 +665,40 @@
   <!-- DOCENTI -->
   <section id="docenti">
     <div class="container">
-      <div class="section-tag">I nostri docenti</div>
-      <h2 class="section-title">Impara da chi lo fa<br><span>ogni giorno</span></h2>
-      <div class="gold-divider"></div>
-      <div class="docenti-intro">
-        <div class="docenti-list">
-          <div class="docente-item">
-            <div class="docente-icon">👨‍🍳</div>
-            <div>
-              <div class="docente-role">Chef Professionisti</div>
-              <div class="docente-desc">Chef in attività con esperienza in ristoranti stellati e resort</div>
-            </div>
-          </div>
-          <div class="docente-item">
-            <div class="docente-icon">🍕</div>
-            <div>
-              <div class="docente-role">Pizzaioli Qualificati</div>
-              <div class="docente-desc">Maestri pizzaioli con specializzazione in pizza napoletana e contemporanea</div>
-            </div>
-          </div>
-          <div class="docente-item">
-            <div class="docente-icon">🍸</div>
-            <div>
-              <div class="docente-role">Barman & Sommelier</div>
-              <div class="docente-desc">Professionisti del beverage con certificazioni internazionali</div>
-            </div>
-          </div>
-          <div class="docente-item">
-            <div class="docente-icon">🍽️</div>
-            <div>
-              <div class="docente-role">Maître di Sala</div>
-              <div class="docente-desc">Direttori di sala con esperienza in strutture 4 e 5 stelle</div>
-            </div>
-          </div>
-          <div class="docente-item">
-            <div class="docente-icon">🍰</div>
-            <div>
-              <div class="docente-role">Pasticceri</div>
-              <div class="docente-desc">Chef pasticceri specializzati in produzione artigianale e dessert d'autore</div>
-            </div>
-          </div>
+      <div style="text-align:center; margin-bottom: 60px">
+        <div class="section-tag">I nostri docenti</div>
+        <h2 class="section-title">Impara da chi lo fa<br><span>ogni giorno</span></h2>
+        <div class="gold-divider centered"></div>
+        <p class="section-desc" style="margin: 0 auto">Professionisti in attività con decenni di esperienza nelle migliori strutture italiane.</p>
+      </div>
+      <div class="docenti-grid">
+        <div class="docente-card">
+          <div class="docente-avatar">👨‍🍳</div>
+          <div class="docente-nome">Costantino Torru</div>
+          <div class="docente-ruolo">Head Chef</div>
+          <span class="docente-anni">30+ anni di esperienza</span>
+          <p class="docente-bio">Head chef con una carriera trentennale nei più rinomati ristoranti e alberghi d'Italia. Esperto di cucina mediterranea e gestione della brigata.</p>
         </div>
-        <div class="docenti-values">
-          <p class="section-desc" style="margin-bottom: 32px">
-            I nostri docenti non sono teorici — sono professionisti che lavorano ogni giorno nel settore e portano in aula la realtà del mestiere.
-          </p>
-          <div class="value-item">
-            <div class="value-number">01</div>
-            <div class="value-text">
-              <h4>Esperienza reale</h4>
-              <p>Ogni docente porta casi pratici, errori reali e soluzioni concrete dal proprio lavoro quotidiano.</p>
-            </div>
-          </div>
-          <div class="value-item">
-            <div class="value-number">02</div>
-            <div class="value-text">
-              <h4>Aggiornamento continuo</h4>
-              <p>I nostri docenti sono attivi nel settore, quindi i contenuti sono sempre attuali e rilevanti.</p>
-            </div>
-          </div>
-          <div class="value-item">
-            <div class="value-number">03</div>
-            <div class="value-text">
-              <h4>Network professionale</h4>
-              <p>Studiare con noi significa entrare in un network di professionisti che possono aprire porte nel settore.</p>
-            </div>
-          </div>
+        <div class="docente-card">
+          <div class="docente-avatar">🍳</div>
+          <div class="docente-nome">Roberto Carta</div>
+          <div class="docente-ruolo">Chef</div>
+          <span class="docente-anni">30+ anni di esperienza</span>
+          <p class="docente-bio">Chef con trent'anni di carriera nelle cucine di ristoranti e strutture alberghiere di prestigio. Specializzato in tecniche di cucina classica e contemporanea.</p>
+        </div>
+        <div class="docente-card">
+          <div class="docente-avatar">🍸</div>
+          <div class="docente-nome">Salvatore Meloni</div>
+          <div class="docente-ruolo">Barman</div>
+          <span class="docente-anni">10+ anni di esperienza</span>
+          <p class="docente-bio">Barman con oltre dieci anni di esperienza nel beverage professionale. Specializzato in mixology, cocktail contemporanei e gestione del banco bar.</p>
+        </div>
+        <div class="docente-card">
+          <div class="docente-avatar">🍰</div>
+          <div class="docente-nome">Simona Manca</div>
+          <div class="docente-ruolo">Chef Pasticcera</div>
+          <span class="docente-anni">Giovane talento</span>
+          <p class="docente-bio">Chef pasticcera con una solida esperienza già maturata nella pasticceria artigianale e nella pasticceria moderna. Creatività e precisione tecnica.</p>
         </div>
       </div>
     </div>
@@ -856,49 +707,85 @@
   <!-- APP HACCP -->
   <section id="app-haccp">
     <div class="container">
-      <div class="haccp-grid">
-        <div>
-          <div class="section-tag">Strumento digitale</div>
-          <h2 class="section-title">Season Work<br><span>HACCP</span></h2>
-          <div class="gold-divider"></div>
-          <p class="section-desc" style="margin-bottom: 24px">
-            La piattaforma digitale per la gestione HACCP nei ristoranti. Parte dell'ecosistema Season Work Academy.
-          </p>
-          <div class="haccp-features">
-            <div class="haccp-feature">Registrazione temperature in tempo reale</div>
-            <div class="haccp-feature">Gestione non conformità e alert automatici</div>
-            <div class="haccp-feature">Etichette digitali con firma operatore</div>
-            <div class="haccp-feature">Scansione AI di DDT e fatture forniture</div>
-            <div class="haccp-feature">Report PDF giornalieri automatici</div>
-            <div class="haccp-feature">Pest control e manutenzione attrezzature</div>
-            <div class="haccp-feature">Formazione del personale tracciata</div>
-          </div>
-          <a href="https://seasonworkhaccp.com" target="_blank" class="btn-primary">Prova gratis 14 giorni</a>
+      <div class="haccp-intro">
+        <div class="section-tag">Strumento digitale incluso</div>
+        <h2 class="section-title">Season Work <span>HACCP</span></h2>
+        <div class="gold-divider centered"></div>
+        <p class="section-desc" style="margin: 0 auto 48px">
+          La piattaforma digitale per la gestione HACCP nei ristoranti. Inclusa nel corso HACCP, disponibile in abbonamento per tutte le strutture.
+        </p>
+      </div>
+
+      <div class="haccp-features-grid">
+        <div class="haccp-feature-card">Registrazione temperature</div>
+        <div class="haccp-feature-card">Non conformità e alert</div>
+        <div class="haccp-feature-card">Etichette digitali</div>
+        <div class="haccp-feature-card">Scansione AI forniture</div>
+        <div class="haccp-feature-card">Report PDF automatici</div>
+        <div class="haccp-feature-card">Pest control</div>
+        <div class="haccp-feature-card">Manutenzione attrezzature</div>
+        <div class="haccp-feature-card">Formazione tracciata</div>
+        <div class="haccp-feature-card">Firma digitale operatori</div>
+        <div class="haccp-feature-card">Abbattimento termico</div>
+        <div class="haccp-feature-card">Gestione allergeni</div>
+        <div class="haccp-feature-card">AI scan con Claude</div>
+      </div>
+
+      <!-- TOGGLE PREZZI -->
+      <div class="prezzi-toggle">
+        <div class="prezzi-tabs">
+          <button class="prezzi-tab active" onclick="setPiano(false, this)">Senza AI</button>
+          <button class="prezzi-tab" onclick="setPiano(true, this)">Con AI 🤖 <span style="font-size:0.75rem; color: inherit">+€10-15/mese</span></button>
         </div>
-        <div class="haccp-visual">
-          <div style="font-size: 4rem; margin-bottom: 24px">📱</div>
-          <div class="haccp-price">Da €29,90</div>
-          <div class="haccp-price-sub">/mese · IVA esclusa</div>
-          <div class="haccp-trial">✓ 14 giorni gratuiti · Nessuna carta richiesta</div>
-          <div style="display: flex; flex-direction: column; gap: 12px; text-align: left; margin-top: 8px">
-            <div style="display:flex; justify-content:space-between; padding: 12px 0; border-bottom: 1px solid #1a1a1a; font-size: 0.85rem;">
-              <span style="color:#888">Solo Admin</span>
-              <span style="color:var(--gold); font-weight:700">€29,90/mese</span>
-            </div>
-            <div style="display:flex; justify-content:space-between; padding: 12px 0; border-bottom: 1px solid #1a1a1a; font-size: 0.85rem;">
-              <span style="color:#888">3 Operatori</span>
-              <span style="color:var(--gold); font-weight:700">€39,90/mese</span>
-            </div>
-            <div style="display:flex; justify-content:space-between; padding: 12px 0; border-bottom: 1px solid #1a1a1a; font-size: 0.85rem;">
-              <span style="color:#888">6 Operatori</span>
-              <span style="color:var(--gold); font-weight:700">€49,90/mese</span>
-            </div>
-            <div style="display:flex; justify-content:space-between; padding: 12px 0; font-size: 0.85rem;">
-              <span style="color:#888">Illimitati</span>
-              <span style="color:var(--gold); font-weight:700">€69,90/mese</span>
-            </div>
-          </div>
+      </div>
+
+      <div class="prezzi-grid" id="prezzi-grid">
+        <!-- Popolato da JS -->
+      </div>
+
+      <div style="text-align:center; margin-top: 48px">
+        <div style="display:inline-block; background: rgba(39,174,96,0.1); border: 1px solid rgba(39,174,96,0.3); color: var(--green); padding: 12px 32px; border-radius: 8px; font-weight: 600; font-size: 0.9rem; margin-bottom: 24px;">
+          ✓ 14 giorni gratuiti · Nessuna carta richiesta
         </div>
+        <br>
+        <a href="https://seasonworkhaccp.com" target="_blank" class="btn-primary">Inizia la prova gratuita</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- LAVORO -->
+  <section id="lavoro">
+    <div class="container">
+      <div style="text-align:center; margin-bottom: 60px">
+        <div class="section-tag">Opportunità di lavoro</div>
+        <h2 class="section-title">I migliori corsisti entrano nelle<br><span>migliori strutture</span></h2>
+        <div class="gold-divider centered"></div>
+        <p class="section-desc" style="margin: 0 auto">
+          I corsisti più meritevoli avranno accesso diretto a opportunità di lavoro nelle più prestigiose strutture alberghiere 4 e 5 stelle della Sardegna.
+        </p>
+      </div>
+      <div class="lavoro-grid">
+        <div class="lavoro-card">
+          <div class="lavoro-card-icon">🏨</div>
+          <h3>Hotel 4 e 5 stelle</h3>
+          <p>Accesso privilegiato alle più prestigiose strutture alberghiere della Sardegna, selezionate tra le migliori catene dell'isola.</p>
+        </div>
+        <div class="lavoro-card">
+          <div class="lavoro-card-icon">🤝</div>
+          <h3>Rete di contatti</h3>
+          <p>I nostri docenti sono professionisti attivi — il tuo network inizia già durante il corso, prima ancora di diplomarti.</p>
+        </div>
+        <div class="lavoro-card">
+          <div class="lavoro-card-icon">⭐</div>
+          <h3>Solo i migliori</h3>
+          <p>Le opportunità sono riservate ai corsisti più meritevoli — un incentivo concreto a dare il massimo durante la formazione.</p>
+        </div>
+      </div>
+      <div class="lavoro-banner">
+        <div class="lavoro-banner-tag">Il nostro impegno</div>
+        <h3>Non formiamo solo professionisti.<br>Costruiamo <span>carriere</span>.</h3>
+        <p>Season Work Academy non è solo un corso — è un trampolino di lancio verso le migliori opportunità nel settore HoReCa sardo e italiano.</p>
+        <a href="#contatti" class="btn-primary">Inizia il tuo percorso</a>
       </div>
     </div>
   </section>
@@ -910,32 +797,21 @@
         <div class="section-tag">Contatti</div>
         <h2 class="section-title">Parliamo del tuo <span>futuro</span></h2>
         <div class="gold-divider centered"></div>
-        <p class="section-desc" style="margin: 0 auto">
-          Hai domande sui corsi o vuoi maggiori informazioni? Scrivici.
-        </p>
+        <p class="section-desc" style="margin: 0 auto">Hai domande sui corsi o vuoi maggiori informazioni? Scrivici.</p>
       </div>
       <div class="contatti-grid">
         <div>
           <a href="mailto:info@seasonworkhaccp.com" class="contatto-item">
             <div class="contatto-icon">✉️</div>
-            <div>
-              <div class="contatto-label">Email</div>
-              <div class="contatto-value">info@seasonworkhaccp.com</div>
-            </div>
+            <div><div class="contatto-label">Email</div><div class="contatto-value">info@seasonworkhaccp.com</div></div>
           </a>
           <a href="https://www.facebook.com/profile.php?id=61590853474948" target="_blank" class="contatto-item">
             <div class="contatto-icon">📘</div>
-            <div>
-              <div class="contatto-label">Facebook</div>
-              <div class="contatto-value">Season Work Academy</div>
-            </div>
+            <div><div class="contatto-label">Facebook</div><div class="contatto-value">Season Work Academy</div></div>
           </a>
           <div class="contatto-item" style="cursor:default">
             <div class="contatto-icon">📍</div>
-            <div>
-              <div class="contatto-label">Sede</div>
-              <div class="contatto-value">Sardegna, Italia</div>
-            </div>
+            <div><div class="contatto-label">Sede</div><div class="contatto-value">Sardegna, Italia</div></div>
           </div>
         </div>
         <div>
@@ -956,8 +832,9 @@
                 <option>Corso di pasticceria</option>
                 <option>Corso bar & mixology</option>
                 <option>Corso sala & servizio</option>
-                <option>HACCP & Sicurezza</option>
+                <option>HACCP & Sicurezza alimentare</option>
                 <option>App Season Work HACCP</option>
+                <option>Opportunità di lavoro</option>
                 <option>Altro</option>
               </select>
             </div>
@@ -972,7 +849,6 @@
     </div>
   </section>
 
-  <!-- FOOTER -->
   <footer>
     <div class="footer-logo">Season Work Academy</div>
     <div class="footer-tagline">Dalla formazione al lavoro, il tuo futuro inizia qui</div>
@@ -980,21 +856,60 @@
       <a href="#chi-siamo">Chi siamo</a>
       <a href="#corsi">Corsi</a>
       <a href="#docenti">Docenti</a>
-      <a href="https://seasonworkhaccp.com" target="_blank">App HACCP</a>
+      <a href="#app-haccp">App HACCP</a>
+      <a href="#lavoro">Lavoro</a>
       <a href="#contatti">Contatti</a>
       <a href="https://seasonworkhaccp.com/privacy" target="_blank">Privacy Policy</a>
     </div>
-    <div class="footer-copy">© 2026 Season Work Academy · P.IVA in fase di registrazione · Tutti i diritti riservati</div>
+    <div class="footer-copy">© 2026 Season Work Academy · Tutti i diritti riservati</div>
   </footer>
 
   <script>
+    const piani = [
+      { id: 'admin', nome: 'Solo Admin', mensile: 29.90, annuale: 299.00, mensileAI: 39.90, annualeAI: 399.00, operatori: 'Solo accesso admin', popolare: false },
+      { id: '3op', nome: '3 Operatori', mensile: 39.90, annuale: 399.00, mensileAI: 49.90, annualeAI: 499.00, operatori: 'Fino a 3 operatori', popolare: false },
+      { id: '6op', nome: '6 Operatori', mensile: 49.90, annuale: 499.00, mensileAI: 59.90, annualeAI: 599.00, operatori: 'Fino a 6 operatori', popolare: true },
+      { id: 'ill', nome: 'Illimitati', mensile: 69.90, annuale: 699.00, mensileAI: 84.90, annualeAI: 849.00, operatori: 'Operatori illimitati', popolare: false },
+    ];
+
+    let conAI = false;
+
+    function setPiano(ai, btn) {
+      conAI = ai;
+      document.querySelectorAll('.prezzi-tab').forEach(t => t.classList.remove('active'));
+      btn.classList.add('active');
+      renderPrezzi();
+    }
+
+    function renderPrezzi() {
+      const grid = document.getElementById('prezzi-grid');
+      grid.innerHTML = piani.map(p => {
+        const prezzo = conAI ? p.mensileAI : p.mensile;
+        const delta = (p.mensileAI - p.mensile).toFixed(2).replace('.', ',');
+        return `
+          <div class="prezzo-card ${p.popolare ? 'popolare' : ''}">
+            ${p.popolare ? '<div class="prezzo-badge-pop">PIÙ POPOLARE</div>' : ''}
+            ${conAI ? `<div class="prezzo-badge-ai">🤖 AI +€${delta}</div>` : ''}
+            <div class="prezzo-nome">${p.nome}</div>
+            <div style="margin: 16px 0 4px">
+              <span class="prezzo-importo">€${prezzo.toFixed(2).replace('.', ',')}</span>
+              <span class="prezzo-periodo">/mese</span>
+            </div>
+            <div class="prezzo-operatori">${p.operatori}</div>
+            <a href="https://seasonworkhaccp.com/abbonati" target="_blank" class="prezzo-btn">Inizia gratis 14 giorni</a>
+          </div>
+        `;
+      }).join('');
+    }
+
+    renderPrezzi();
+
     function handleForm(e) {
       e.preventDefault();
       alert('Messaggio inviato! Ti risponderemo entro 24 ore.');
       e.target.reset();
     }
 
-    // Smooth scroll per nav mobile
     document.querySelectorAll('a[href^="#"]').forEach(a => {
       a.addEventListener('click', e => {
         const target = document.querySelector(a.getAttribute('href'));
