@@ -26,7 +26,28 @@
       font-family: 'Montserrat', sans-serif;
       font-size: 16px;
       line-height: 1.6;
+      position: relative;
     }
+
+    /* WATERMARK SFONDO */
+    body::before {
+      content: '';
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 80vmin;
+      height: 80vmin;
+      background-image: url('logo.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      opacity: 0.04;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    * { position: relative; z-index: 1; }
 
     nav {
       position: fixed;
@@ -89,8 +110,22 @@
       content: '';
       position: absolute;
       top: 0; left: 0; right: 0; bottom: 0;
-      background: radial-gradient(ellipse at center top, rgba(201,168,76,0.08) 0%, transparent 70%);
+      background: radial-gradient(ellipse at center, rgba(201,168,76,0.06) 0%, transparent 70%);
       pointer-events: none;
+      z-index: 0;
+    }
+
+    .hero-logo {
+      width: min(420px, 80vw);
+      height: auto;
+      margin-bottom: 40px;
+      filter: drop-shadow(0 0 40px rgba(201,168,76,0.2));
+      animation: fadeInDown 1s ease;
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
     .hero-tag {
@@ -104,18 +139,13 @@
       padding: 6px 20px;
       border-radius: 20px;
       display: inline-block;
+      animation: fadeIn 1.2s ease;
     }
 
-    .hero-title {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: clamp(3rem, 8vw, 6rem);
-      font-weight: 700;
-      line-height: 1.05;
-      color: var(--white);
-      margin-bottom: 12px;
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
     }
-
-    .hero-title span { color: var(--gold); }
 
     .hero-subtitle {
       font-family: 'Cormorant Garamond', serif;
@@ -123,6 +153,7 @@
       color: #aaa;
       margin-bottom: 40px;
       font-style: italic;
+      animation: fadeIn 1.4s ease;
     }
 
     .hero-desc {
@@ -131,9 +162,10 @@
       font-size: 0.95rem;
       margin-bottom: 48px;
       line-height: 1.8;
+      animation: fadeIn 1.6s ease;
     }
 
-    .hero-btns { display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; }
+    .hero-btns { display: flex; gap: 16px; flex-wrap: wrap; justify-content: center; animation: fadeIn 1.8s ease; }
 
     .btn-primary {
       background: var(--gold);
@@ -197,7 +229,7 @@
     .gold-divider { width: 60px; height: 2px; background: var(--gold); margin: 20px 0; }
     .gold-divider.centered { margin: 20px auto; }
 
-    #chi-siamo { background: var(--black2); }
+    #chi-siamo { background: rgba(15,15,15,0.95); }
 
     .chi-siamo-grid {
       display: grid;
@@ -217,12 +249,12 @@
 
     .stat-label { color: #888; font-size: 0.8rem; margin-top: 4px; }
 
-    #corsi { background: var(--black); }
+    #corsi { background: rgba(8,8,8,0.95); }
 
     .corsi-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; margin-top: 60px; }
 
     .corso-card {
-      background: var(--black2);
+      background: rgba(15,15,15,0.95);
       border: 1px solid #1a1a1a;
       border-radius: 16px;
       padding: 36px 28px;
@@ -244,13 +276,13 @@
     .corso-card:hover { border-color: rgba(201,168,76,0.3); transform: translateY(-4px); }
     .corso-card:hover::before { transform: scaleX(1); }
 
-    .corso-emoji { font-size: 2.5rem; margin-bottom: 20px; display: block; }
+    .corso-line { width: 40px; height: 2px; background: var(--gold); margin-bottom: 20px; opacity: 0.6; }
     .corso-title { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; font-weight: 700; color: var(--gold); margin-bottom: 12px; }
     .corso-desc { color: #888; font-size: 0.88rem; line-height: 1.7; margin-bottom: 20px; }
     .corso-tag { display: inline-block; background: rgba(201,168,76,0.1); color: var(--gold); padding: 4px 12px; border-radius: 20px; font-size: 0.75rem; font-weight: 600; }
     .corso-tag.disponibile { background: rgba(39,174,96,0.1); color: var(--green); }
 
-    #docenti { background: var(--black2); }
+    #docenti { background: rgba(15,15,15,0.95); }
 
     .docenti-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 24px; margin-top: 60px; }
 
@@ -283,15 +315,7 @@
     .docente-anni { display: inline-block; background: rgba(201,168,76,0.1); color: var(--gold); padding: 4px 12px; border-radius: 20px; font-size: 0.72rem; font-weight: 600; margin-bottom: 16px; }
     .docente-bio { color: #888; font-size: 0.83rem; line-height: 1.7; }
 
-    #app-haccp { background: var(--black); position: relative; overflow: hidden; }
-
-    #app-haccp::before {
-      content: '';
-      position: absolute;
-      top: 0; left: 0; right: 0; bottom: 0;
-      background: radial-gradient(ellipse at right center, rgba(201,168,76,0.05) 0%, transparent 60%);
-      pointer-events: none;
-    }
+    #app-haccp { background: rgba(8,8,8,0.95); position: relative; overflow: hidden; }
 
     .haccp-features-grid {
       display: grid;
@@ -301,7 +325,7 @@
     }
 
     .haccp-feature-card {
-      background: var(--black2);
+      background: rgba(15,15,15,0.95);
       border: 1px solid #1a1a1a;
       border-radius: 12px;
       padding: 16px 20px;
@@ -342,7 +366,7 @@
     .prezzi-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 24px; }
 
     .prezzo-card {
-      background: var(--black2);
+      background: rgba(15,15,15,0.95);
       border: 1px solid #222;
       border-radius: 16px;
       padding: 32px 24px;
@@ -399,7 +423,7 @@
     .prezzo-btn:hover { background: var(--gold); color: var(--black); }
     .prezzo-card.popolare .prezzo-btn { background: var(--gold); color: var(--black); }
 
-    #lavoro { background: var(--black2); }
+    #lavoro { background: rgba(15,15,15,0.95); }
 
     .lavoro-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; margin-bottom: 60px; }
 
@@ -430,14 +454,14 @@
     .lavoro-banner h3 span { color: var(--gold); }
     .lavoro-banner p { color: #888; font-size: 0.95rem; max-width: 600px; margin: 0 auto 32px; line-height: 1.8; }
 
-    #contatti { background: var(--black); }
+    #contatti { background: rgba(8,8,8,0.95); }
 
     .contatti-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; margin-top: 60px; }
 
     .contatto-item {
       display: flex; align-items: center; gap: 16px;
       padding: 20px;
-      background: var(--black2);
+      background: rgba(15,15,15,0.95);
       border-radius: 12px;
       border: 1px solid #222;
       margin-bottom: 16px;
@@ -457,7 +481,7 @@
     .form-group textarea,
     .form-group select {
       width: 100%;
-      background: var(--black2);
+      background: rgba(15,15,15,0.95);
       border: 1px solid #222;
       border-radius: 8px;
       padding: 12px 16px;
@@ -492,7 +516,7 @@
     .form-submit:hover { background: var(--gold-light); }
 
     footer {
-      background: var(--black2);
+      background: rgba(15,15,15,0.98);
       border-top: 1px solid #1a1a1a;
       padding: 40px 24px;
       text-align: center;
@@ -512,6 +536,7 @@
       .chi-siamo-grid, .contatti-grid { grid-template-columns: 1fr; gap: 40px; }
       .chi-siamo-stats { grid-template-columns: 1fr 1fr; }
       .lavoro-banner { padding: 32px 20px; }
+      .hero-logo { width: min(300px, 85vw); }
     }
   </style>
 </head>
@@ -531,8 +556,8 @@
   </nav>
 
   <section id="hero">
+    <img src="logo.png" alt="Season Work Academy" class="hero-logo" />
     <span class="hero-tag">Formazione professionale HoReCa</span>
-    <h1 class="hero-title">Season Work<br><span>Academy</span></h1>
     <p class="hero-subtitle">Dalla formazione al lavoro, il tuo futuro inizia qui</p>
     <p class="hero-desc">
       Formiamo cuochi, pizzaioli, baristi e camerieri con docenti professionisti in attività.
@@ -576,37 +601,37 @@
       </div>
       <div class="corsi-grid">
         <div class="corso-card">
-          <span class="corso-emoji">👨‍🍳</span>
+          <div class="corso-line"></div>
           <div class="corso-title">Cucina Professionale</div>
           <p class="corso-desc">Tecniche di cucina moderna, gestione del servizio, mise en place e organizzazione della brigata. Dal prodotto al piatto.</p>
           <span class="corso-tag">In arrivo</span>
         </div>
         <div class="corso-card">
-          <span class="corso-emoji">🍕</span>
+          <div class="corso-line"></div>
           <div class="corso-title">Arte della Pizzeria</div>
           <p class="corso-desc">Impasti, lievitazioni, cottura e gestione del forno. Tradizione napoletana e pizza contemporanea con pizzaioli qualificati.</p>
           <span class="corso-tag">In arrivo</span>
         </div>
         <div class="corso-card">
-          <span class="corso-emoji">🍰</span>
+          <div class="corso-line"></div>
           <div class="corso-title">Pasticceria</div>
           <p class="corso-desc">Tecniche di pasticceria classica e moderna, dessert al piatto, lavorazione del cioccolato e gestione della produzione.</p>
           <span class="corso-tag">In arrivo</span>
         </div>
         <div class="corso-card">
-          <span class="corso-emoji">🍸</span>
+          <div class="corso-line"></div>
           <div class="corso-title">Bar & Mixology</div>
           <p class="corso-desc">Cocktail classici e contemporanei, gestione del banco, caffetteria professionale e customer experience al bar.</p>
           <span class="corso-tag">In arrivo</span>
         </div>
         <div class="corso-card">
-          <span class="corso-emoji">🍽️</span>
+          <div class="corso-line"></div>
           <div class="corso-title">Sala & Servizio</div>
           <p class="corso-desc">Tecniche di servizio, gestione della sala, abbinamento cibo-vino e comunicazione con il cliente. Il maître del futuro.</p>
           <span class="corso-tag">In arrivo</span>
         </div>
         <div class="corso-card">
-          <span class="corso-emoji">📋</span>
+          <div class="corso-line"></div>
           <div class="corso-title">HACCP & Sicurezza Alimentare</div>
           <p class="corso-desc">Normativa HACCP, gestione digitale della sicurezza alimentare e procedure di autocontrollo. Include accesso all'app Season Work HACCP.</p>
           <span class="corso-tag disponibile">Disponibile</span>
