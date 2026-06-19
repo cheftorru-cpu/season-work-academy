@@ -252,7 +252,7 @@
 
     #docenti { background: var(--black2); }
 
-    .docenti-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 24px; margin-top: 60px; }
+    .docenti-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 24px; margin-top: 60px; }
 
     .docente-card {
       background: var(--black3);
@@ -261,19 +261,22 @@
       padding: 32px 24px;
       text-align: center;
       transition: all 0.3s;
+      position: relative;
+    }
+
+    .docente-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 3px;
+      background: var(--gold);
+      border-radius: 16px 16px 0 0;
+      transform: scaleX(0);
+      transition: transform 0.3s;
     }
 
     .docente-card:hover { border-color: rgba(201,168,76,0.3); transform: translateY(-4px); }
-
-    .docente-avatar {
-      width: 80px; height: 80px;
-      background: rgba(201,168,76,0.1);
-      border: 2px solid rgba(201,168,76,0.3);
-      border-radius: 50%;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 2rem;
-      margin: 0 auto 20px;
-    }
+    .docente-card:hover::before { transform: scaleX(1); }
 
     .docente-nome { font-family: 'Cormorant Garamond', serif; font-size: 1.3rem; font-weight: 700; color: var(--white); margin-bottom: 6px; }
     .docente-ruolo { color: var(--gold); font-size: 0.78rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 12px; }
@@ -622,35 +625,30 @@
       </div>
       <div class="docenti-grid">
         <div class="docente-card">
-          <div class="docente-avatar">👨‍🍳</div>
           <div class="docente-nome">Costantino Torru</div>
           <div class="docente-ruolo">Head Chef</div>
           <span class="docente-anni">30+ anni di esperienza</span>
           <p class="docente-bio">Head chef con una carriera trentennale nei più rinomati ristoranti e alberghi d'Italia. Esperto di cucina mediterranea e gestione della brigata.</p>
         </div>
         <div class="docente-card">
-          <div class="docente-avatar">🍳</div>
           <div class="docente-nome">Roberto Carta</div>
           <div class="docente-ruolo">Chef</div>
           <span class="docente-anni">30+ anni di esperienza</span>
           <p class="docente-bio">Chef con trent'anni di carriera nelle cucine di ristoranti e strutture alberghiere di prestigio. Specializzato in tecniche di cucina classica e contemporanea.</p>
         </div>
         <div class="docente-card">
-          <div class="docente-avatar">🍸</div>
           <div class="docente-nome">Salvatore Meloni</div>
           <div class="docente-ruolo">Barman</div>
           <span class="docente-anni">10+ anni di esperienza</span>
           <p class="docente-bio">Barman con oltre dieci anni di esperienza nel beverage professionale. Specializzato in mixology, cocktail contemporanei e gestione del banco bar.</p>
         </div>
         <div class="docente-card">
-          <div class="docente-avatar">🍕</div>
           <div class="docente-nome">Costanzo Pisano</div>
           <div class="docente-ruolo">Pizzaiolo</div>
           <span class="docente-anni">Giovane talento</span>
           <p class="docente-bio">Pizzaiolo con una solida esperienza già maturata nell'arte della pizza artigianale. Padronanza degli impasti, lievitazioni e cottura nel forno a legna.</p>
         </div>
         <div class="docente-card">
-          <div class="docente-avatar">🍰</div>
           <div class="docente-nome">Simona Manca</div>
           <div class="docente-ruolo">Chef Pasticcera</div>
           <span class="docente-anni">Giovane talento</span>
